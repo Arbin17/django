@@ -3,8 +3,6 @@ import torch
 from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 import json
-import numpy as np
-
 # Initialize FastAPI app
 app = FastAPI(title="Product Recommendation API")
 
@@ -81,4 +79,3 @@ async def recommend(request: Request):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-# Run the FastAPI app
