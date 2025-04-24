@@ -1,0 +1,30 @@
+# Core Framework
+Django==4.2.5
+fastapi==0.115.8
+uvicorn==0.34.0
+
+# Database
+psycopg2-binary==2.9.10
+redis==5.2.1
+
+# AI/ML & Recommendation System
+numpy==2.0.2
+pandas==2.2.3
+scikit-learn==1.5.2
+tensorflow==2.19.0
+transformers==4.51.3
+sentence-transformers==4.1.0
+
+# Image Processing
+pillow==11.1.0
+opencv-python-headless==4.11.0.86
+
+# Authentication & Security
+python-jose==3.4.0
+passlib==1.7.4
+bcrypt==4.3.0
+
+# Utilities
+python-dotenv==1.1.0
+celery==5.3.6
+httpx==0.13.3
