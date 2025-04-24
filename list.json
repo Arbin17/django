@@ -1,0 +1,815 @@
+{
+  "Tech": [
+    {
+      "name": "AI Voice Assistant Speaker",
+      "description": "Smart speaker with built-in AI assistant and superior sound quality.",
+      "price": 221.45
+    },
+    {
+      "name": "Noise-Isolating Earphones",
+      "description": "Compact earphones with premium noise-isolating features.",
+      "price": 82.59
+    },
+    {
+      "name": "Smart Doorbell Camera",
+      "description": "HD video doorbell with motion detection and cloud storage.",
+      "price": 264.75
+    },
+    {
+      "name": "Wireless HDMI Transmitter",
+      "description": "Stream high-definition content wirelessly to any display.",
+      "price": 348.99
+    },
+    {
+      "name": "Foldable Bluetooth Keyboard",
+      "description": "Portable keyboard for tablets and smartphones.",
+      "price": 114.88
+    },
+    {
+      "name": "AI Fitness Tracker",
+      "description": "Track health metrics with real-time AI insights.",
+      "price": 199.31
+    },
+    {
+      "name": "Smart Pet Feeder",
+      "description": "Feed pets remotely using mobile app integration.",
+      "price": 176.55
+    },
+    {
+      "name": "LED Strip Lights Kit",
+      "description": "Custom RGB lighting with remote control and app sync.",
+      "price": 93.84
+    },
+    {
+      "name": "Streaming Media Box",
+      "description": "Turn any TV into a smart one with 4K support.",
+      "price": 249.67
+    },
+    {
+      "name": "Digital Notepad Tablet",
+      "description": "Paperless writing tablet with cloud sync.",
+      "price": 319.56
+    },
+    {
+      "name": "Wireless Headphone",
+      "description": "Stylish Wireless HeadPhone From Boat.",
+      "price": 77.9
+    },
+    {
+      "name": "Smartphone X200",
+      "description": "The Smartphone X200 is packed with the latest features, including a 6.7-inch display, 5G support, a 48MP camera, and a fast-charging battery. Perfect for tech enthusiasts who need performance and style.",
+      "price": 1168.39
+    },
+    {
+      "name": "Wireless Earbuds Pro",
+      "description": "Wireless Earbuds Pro offers high-definition sound and noise-canceling technology, making them perfect for music lovers on the go. With up to 10 hours of battery life, they are designed for long listening sessions.",
+      "price": 1092.91
+    },
+    {
+      "name": "4K Smart TV 50",
+      "description": "The 4K Smart TV offers stunning visuals with ultra-clear picture quality and vibrant colors. Featuring built-in streaming apps, it\u2019s perfect for watching movies, shows, and playing games in stunning resolution.",
+      "price": 296.76
+    },
+    {
+      "name": "Laptop UltraBook 13",
+      "description": "Laptop UltraBook 13 is a sleek, lightweight, and powerful device equipped with an Intel Core i7 processor, 16GB RAM, and 512GB SSD. Ideal for professionals who need portability and performance in one package.",
+      "price": 1265.39
+    },
+    {
+      "name": "Smart Home Hub",
+      "description": "Control your smart devices with voice and automation from a single hub.",
+      "price": 375.39
+    },
+    {
+      "name": "Gaming Monitor 27",
+      "description": "High refresh rate 27-inch display for immersive gaming.",
+      "price": 583.78
+    },
+    {
+      "name": "Noise Cancelling Headphones",
+      "description": "Block distractions with premium sound and ANC technology.",
+      "price": 1086.96
+    },
+    {
+      "name": "Wireless Mechanical Keyboard",
+      "description": "Tactile and wireless \u2014 the perfect productivity companion.",
+      "price": 161.54
+    },
+    {
+      "name": "Drone 4K Pro",
+      "description": "Capture stunning aerial footage with ease.",
+      "price": 518.71
+    },
+    {
+      "name": "VR Headset XR2",
+      "description": "Step into virtual reality with high fidelity tracking.",
+      "price": 534.28
+    },
+    {
+      "name": "Bluetooth Smartwatch",
+      "description": "Stay connected and track your health in style.",
+      "price": 198.39
+    },
+    {
+      "name": "Portable SSD 1TB",
+      "description": "Fast and durable storage for on-the-go work.",
+      "price": 984.42
+    },
+    {
+      "name": "USB-C Docking Station",
+      "description": "Expand your laptop connectivity with 10 ports.",
+      "price": 833.61
+    },
+    {
+      "name": "AI-Powered Webcam",
+      "description": "Crystal-clear calls with smart framing features.",
+      "price": 160.68
+    },
+    {
+      "name": "Mini Projector HD",
+      "description": "Portable cinema with vibrant HD projection.",
+      "price": 277.8
+    },
+    {
+      "name": "Wireless Charging Pad",
+      "description": "Charge devices effortlessly with Qi technology.",
+      "price": 395.14
+    },
+    {
+      "name": "Laptop Cooling Stand",
+      "description": "Keep your device cool and ergonomic.",
+      "price": 1261.31
+    },
+    {
+      "name": "Smart Light Kit",
+      "description": "Customizable lighting for your smart home.",
+      "price": 488.92
+    },
+    {
+      "name": "UltraSlim Power Bank",
+      "description": "High-capacity portable charger with fast charging.",
+      "price": 854.21
+    },
+    {
+      "name": "Smart Glasses",
+      "description": "AR-enabled smart glasses with camera and notifications.",
+      "price": 950.97
+    },
+    {
+      "name": "Portable Bluetooth Speaker",
+      "description": "Compact speaker with deep bass and waterproof design.",
+      "price": 135.18
+    }
+  ],
+  "Food": [
+    {
+      "name": "Turmeric Latte Mix",
+      "description": "Golden milk blend with organic turmeric and spices.",
+      "price": 9.35
+    },
+    {
+      "name": "Freeze-Dried Strawberries",
+      "description": "Crispy and sweet strawberries, perfect for snacks or cereal.",
+      "price": 7.64
+    },
+    {
+      "name": "Organic Trail Mix",
+      "description": "Mix of dried fruits, nuts, and seeds with no added sugar.",
+      "price": 14.21
+    },
+    {
+      "name": "Pea Protein Chips",
+      "description": "Savory and crunchy plant-based protein snack.",
+      "price": 6.39
+    },
+    {
+      "name": "Coconut Water Pack",
+      "description": "Hydrating natural coconut water, rich in electrolytes.",
+      "price": 18.23
+    },
+    {
+      "name": "Oat Milk Chocolate Drink",
+      "description": "Dairy-free chocolate drink made from oats.",
+      "price": 12.56
+    },
+    {
+      "name": "Superfood Smoothie Mix",
+      "description": "Nutrient-rich powder blend for energy and immunity.",
+      "price": 16.42
+    },
+    {
+      "name": "Spicy Roasted Chickpeas",
+      "description": "Crunchy, high-protein snack with a kick.",
+      "price": 5.88
+    },
+    {
+      "name": "Organic Beetroot Powder",
+      "description": "Great for smoothies and natural coloring.",
+      "price": 11.09
+    },
+    {
+      "name": "Gourmet Popcorn Mix",
+      "description": "Sweet and savory popcorn in a festive tin.",
+      "price": 13.95
+    }
+    ,
+    {
+      "name": "Organic Almond Butter",
+      "description": "Creamy and nutritious spread made from roasted almonds.",
+      "price": 10.76
+    },
+    {
+      "name": "Quinoa Snack Bars",
+      "description": "Healthy bars packed with protein and fiber.",
+      "price": 5.14
+    },
+    {
+      "name": "Cold Brew Coffee Pack",
+      "description": "Smooth, rich cold brew ready to enjoy anytime.",
+      "price": 16.67
+    },
+    {
+      "name": "Vegan Protein Powder",
+      "description": "Plant-based protein for workouts and meal replacement.",
+      "price": 18.66
+    },
+    {
+      "name": "Granola with Berries",
+      "description": "Crunchy granola blended with dried berries.",
+      "price": 18.99
+    },
+    {
+      "name": "Matcha Green Tea",
+      "description": "Premium ceremonial-grade matcha from Japan.",
+      "price": 6.87
+    },
+    {
+      "name": "Gluten-Free Pancake Mix",
+      "description": "Delicious pancakes without gluten.",
+      "price": 21.78
+    },
+    {
+      "name": "Dried Mango Slices",
+      "description": "Naturally sweet and chewy dried mango.",
+      "price": 11.06
+    },
+    {
+      "name": "Natural Honey Jar",
+      "description": "Pure raw honey straight from the farm.",
+      "price": 26.68
+    },
+    {
+      "name": "Chia Seeds Pack",
+      "description": "Superfood for smoothies, puddings, and more.",
+      "price": 13.43
+    },
+    {
+      "name": "Herbal Detox Tea",
+      "description": "Blend of herbs to refresh and cleanse.",
+      "price": 12.65
+    },
+    {
+      "name": "Greek Olive Oil",
+      "description": "Extra virgin olive oil from organic groves.",
+      "price": 5.41
+    },
+    {
+      "name": "Protein Oatmeal Cups",
+      "description": "Single-serve oatmeal with 20g protein.",
+      "price": 11.32
+    },
+    {
+      "name": "Organic Peanut Butter",
+      "description": "No sugar added, high in protein.",
+      "price": 9.46
+    },
+    {
+      "name": "Kombucha Variety Pack",
+      "description": "Gut-friendly fermented tea drink.",
+      "price": 20.56
+    },
+    {
+      "name": "Mixed Nuts Pouch",
+      "description": "Healthy snack of almonds, cashews, and walnuts.",
+      "price": 11.49
+    },
+    {
+      "name": "Instant Ramen Bowl",
+      "description": "Gourmet-style ramen with real ingredients.",
+      "price": 29.48
+    },
+    {
+      "name": "Dark Chocolate Bar 80%",
+      "description": "Rich dark chocolate with minimal sugar.",
+      "price": 11.77
+    },
+    {
+      "name": "Himalayan Pink Salt",
+      "description": "Finely ground natural pink salt.",
+      "price": 8.7
+    },
+    {
+      "name": "Plant-Based Jerky",
+      "description": "Savory meat alternative snack.",
+      "price": 29.3
+    },
+    {
+      "name": "Avocado Oil Bottle",
+      "description": "Heart-healthy oil for cooking and dressing.",
+      "price": 27.94
+    },
+    {
+      "name": "Protein Cookie Box",
+      "description": "Soft-baked cookies packed with protein and fiber.",
+      "price": 10.15
+    }
+  ],
+  "Clothes": [
+    {
+      "name": "Techwear Utility Pants",
+      "description": "Water-resistant pants with multiple pockets and zippers.",
+      "price": 89.99
+    },
+    {
+      "name": "Eco-Friendly Hoodie",
+      "description": "Made from recycled materials with a soft brushed lining.",
+      "price": 112.45
+    },
+    {
+      "name": "Silk Camisole",
+      "description": "Elegant silk camisole for layering or nightwear.",
+      "price": 79.31
+    },
+    {
+      "name": "Urban Cargo Jacket",
+      "description": "Modern utility jacket with adjustable cuffs and waist.",
+      "price": 148.67
+    },
+    {
+      "name": "Yoga Romper",
+      "description": "One-piece activewear for yoga and lounging.",
+      "price": 53.44
+    },
+    {
+      "name": "UV Protection Shirt",
+      "description": "Breathable shirt with UPF 50+ sun protection.",
+      "price": 66.89
+    },
+    {
+      "name": "Comfy Lounge Shorts",
+      "description": "Relaxed fit shorts for home or casual outings.",
+      "price": 29.90
+    },
+    {
+      "name": "Terry Cloth Bathrobe",
+      "description": "Ultra-soft bathrobe with waist tie and deep pockets.",
+      "price": 94.23
+    },
+    {
+      "name": "Velvet Blazer",
+      "description": "Luxurious blazer with a slim fit cut.",
+      "price": 139.56
+    },
+    {
+      "name": "Linen Jogger Pants",
+      "description": "Lightweight linen pants for warm-weather comfort.",
+      "price": 74.12
+    }
+    ,
+    {
+      "name": "Men's Classic Denim Jacket",
+      "description": "Stylish and rugged denim jacket for all seasons.",
+      "price": 55.14
+    },
+    {
+      "name": "Women's Linen Summer Dress",
+      "description": "Breathable fabric with floral patterns.",
+      "price": 103.82
+    },
+    {
+      "name": "Unisex Hoodie Fleece",
+      "description": "Cozy and minimal design for all-day comfort.",
+      "price": 102.79
+    },
+    {
+      "name": "Athletic Leggings",
+      "description": "Flexible and moisture-wicking for workouts.",
+      "price": 33.37
+    },
+    {
+      "name": "Formal Blazer",
+      "description": "Perfect for business meetings and smart casual.",
+      "price": 86.98
+    },
+    {
+      "name": "Graphic T-shirt",
+      "description": "100% cotton with unique printed design.",
+      "price": 100.8
+    },
+    {
+      "name": "Slim Fit Chinos",
+      "description": "Casual yet polished pants for everyday wear.",
+      "price": 41.13
+    },
+    {
+      "name": "Wool Winter Coat",
+      "description": "Stay warm in style during cold months.",
+      "price": 25.38
+    },
+    {
+      "name": "Crew Neck Sweater",
+      "description": "Soft knitwear with minimalist style.",
+      "price": 47.64
+    },
+    {
+      "name": "Cotton Polo Shirt",
+      "description": "Classic polo shirt with breathable fabric.",
+      "price": 113.0
+    },
+    {
+      "name": "Maxi Skirt",
+      "description": "Elegant full-length skirt with flowing silhouette.",
+      "price": 36.38
+    },
+    {
+      "name": "Jogger Pants",
+      "description": "Urban style joggers with ankle cuffs.",
+      "price": 62.23
+    },
+    {
+      "name": "Rainproof Windbreaker",
+      "description": "Lightweight jacket for rain and wind.",
+      "price": 65.6
+    },
+    {
+      "name": "Sleeveless Tank Top",
+      "description": "Essential base layer or summer wear.",
+      "price": 39.16
+    },
+    {
+      "name": "Puffer Vest",
+      "description": "Layered warmth without sleeves.",
+      "price": 96.83
+    },
+    {
+      "name": "Ankle Socks (5-Pack)",
+      "description": "Everyday comfort and durability.",
+      "price": 74.01
+    },
+    {
+      "name": "Leather Belt",
+      "description": "Genuine leather with metallic buckle.",
+      "price": 107.08
+    },
+    {
+      "name": "Running Shorts",
+      "description": "Lightweight and quick-drying.",
+      "price": 19.75
+    },
+    {
+      "name": "Cashmere Scarf",
+      "description": "Luxurious warmth for chilly days.",
+      "price": 93.64
+    },
+    {
+      "name": "Woven Fedora Hat",
+      "description": "Stylish hat for sun or fashion.",
+      "price": 64.18
+    },
+    {
+      "name": "Denim Overalls",
+      "description": "Casual and functional with a retro touch.",
+      "price": 118.24
+    },
+    {
+      "name": "Thermal Base Layer Set",
+      "description": "Stay warm in cold weather activities.",
+      "price": 46.08
+    }
+  ],
+  "Cars": [
+    {
+      "name": "Genesis GV70",
+      "description": "Luxury midsize SUV with high-tech features.",
+      "price": 53900.00
+    },
+    {
+      "name": "Nissan Ariya",
+      "description": "Stylish all-electric crossover with spacious interior.",
+      "price": 47985.00
+    },
+    {
+      "name": "Polestar 2",
+      "description": "Performance electric sedan with Scandinavian design.",
+      "price": 55800.00
+    },
+    {
+      "name": "Toyota RAV4 Prime",
+      "description": "Plug-in hybrid SUV with all-wheel drive.",
+      "price": 41990.00
+    },
+    {
+      "name": "Chevy Equinox EV",
+      "description": "Affordable electric SUV with sleek design.",
+      "price": 38400.00
+    },
+    {
+      "name": "Audi Q4 e-tron",
+      "description": "Electric luxury compact SUV with Audi flair.",
+      "price": 57660.00
+    },
+    {
+      "name": "Hyundai Kona Electric",
+      "description": "Compact and budget-friendly electric SUV.",
+      "price": 36200.00
+    },
+    {
+      "name": "BMW i4",
+      "description": "Luxury electric coupe with sports performance.",
+      "price": 65430.00
+    },
+    {
+      "name": "Kia EV9",
+      "description": "Futuristic 3-row electric SUV.",
+      "price": 62010.00
+    },
+    {
+      "name": "Lucid Gravity",
+      "description": "Premium electric SUV with exceptional range.",
+      "price": 79800.00
+    }
+    ,
+    {
+      "name": "Toyota Corolla 2023",
+      "description": "Reliable and fuel-efficient compact sedan.",
+      "price": 31233.08
+    },
+    {
+      "name": "Tesla Model 3",
+      "description": "All-electric sedan with autopilot.",
+      "price": 48270.22
+    },
+    {
+      "name": "Honda CR-V Hybrid",
+      "description": "Spacious SUV with hybrid technology.",
+      "price": 77433.37
+    },
+    {
+      "name": "BMW 3 Series",
+      "description": "Luxury sedan with premium performance.",
+      "price": 34534.71
+    },
+    {
+      "name": "Ford F-150",
+      "description": "Powerful and dependable pickup truck.",
+      "price": 98065.57
+    },
+    {
+      "name": "Hyundai Ioniq 5",
+      "description": "Modern electric SUV with fast charging.",
+      "price": 35869.33
+    },
+    {
+      "name": "Chevrolet Bolt EV",
+      "description": "Affordable all-electric hatchback.",
+      "price": 65610.93
+    },
+    {
+      "name": "Mercedes-Benz C-Class",
+      "description": "Sleek, tech-forward luxury vehicle.",
+      "price": 94204.89
+    },
+    {
+      "name": "Jeep Wrangler 4x4",
+      "description": "Off-road beast with iconic design.",
+      "price": 33119.9
+    },
+    {
+      "name": "Kia Sportage",
+      "description": "Versatile and efficient compact SUV.",
+      "price": 66435.34
+    },
+    {
+      "name": "Mazda CX-5",
+      "description": "Sporty and practical family car.",
+      "price": 37659.25
+    },
+    {
+      "name": "Nissan Leaf",
+      "description": "Electric pioneer with updated tech.",
+      "price": 99638.1
+    },
+    {
+      "name": "Audi A4",
+      "description": "Compact luxury car with Quattro.",
+      "price": 34388.58
+    },
+    {
+      "name": "Subaru Outback",
+      "description": "Rugged AWD crossover for all terrain.",
+      "price": 32861.35
+    },
+    {
+      "name": "Volvo XC40",
+      "description": "Scandinavian safety and comfort.",
+      "price": 34362.48
+    },
+    {
+      "name": "Toyota Prius Prime",
+      "description": "Hybrid with extended electric range.",
+      "price": 51724.07
+    },
+    {
+      "name": "Ford Mustang GT",
+      "description": "American muscle reimagined.",
+      "price": 22996.25
+    },
+    {
+      "name": "Rivian R1T",
+      "description": "Electric adventure pickup.",
+      "price": 40297.14
+    },
+    {
+      "name": "Mini Cooper S",
+      "description": "Compact and spirited city car.",
+      "price": 93793.17
+    },
+    {
+      "name": "Porsche Taycan",
+      "description": "Luxury electric performance sedan.",
+      "price": 68652.4
+    },
+    {
+      "name": "Lucid Air",
+      "description": "Luxury electric sedan with long range.",
+      "price": 49033.0
+    },
+    {
+      "name": "Toyota Highlander",
+      "description": "Spacious SUV with hybrid performance.",
+      "price": 74838.3
+    }
+  ],
+  "Furniture": [{
+    "name": "Adjustable Standing Desk",
+    "description": "Motorized height-adjustable desk for healthy posture.",
+    "price": 745.90
+  },
+  {
+    "name": "Velvet Ottoman Bench",
+    "description": "Stylish bench with hidden storage compartment.",
+    "price": 215.30
+  },
+  {
+    "name": "Industrial Coffee Table",
+    "description": "Wood and iron table for rustic interiors.",
+    "price": 379.60
+  },
+  {
+    "name": "Convertible Bunk Bed",
+    "description": "Space-saving bunk bed that separates into two beds.",
+    "price": 695.47
+  },
+  {
+    "name": "Rattan Lounge Chair",
+    "description": "Handwoven chair with soft cushions for outdoor use.",
+    "price": 312.85
+  },
+  {
+    "name": "Modern Bookshelf Cabinet",
+    "description": "Open shelves with a built-in cabinet base.",
+    "price": 486.77
+  },
+  {
+    "name": "Mid-Century Desk",
+    "description": "Timeless writing desk with drawers and wood legs.",
+    "price": 579.90
+  },
+  {
+    "name": "Bamboo Folding Table",
+    "description": "Eco-friendly table ideal for small spaces.",
+    "price": 178.44
+  },
+  {
+    "name": "Hanging Hammock Chair",
+    "description": "Comfy chair swing for indoor or outdoor relaxation.",
+    "price": 261.77
+  },
+  {
+    "name": "Corner Shelf Tower",
+    "description": "5-tier shelf perfect for maximizing corner space.",
+    "price": 239.93
+  }
+    ,
+    {
+      "name": "Modern Leather Sofa",
+      "description": "Three-seater couch with sleek leather upholstery.",
+      "price": 92.98
+    },
+    {
+      "name": "Oak Dining Table",
+      "description": "Sturdy table made from premium oak wood.",
+      "price": 594.14
+    },
+    {
+      "name": "Ergonomic Office Chair",
+      "description": "Adjustable comfort with lumbar support.",
+      "price": 426.5
+    },
+    {
+      "name": "Queen Size Bed Frame",
+      "description": "Minimalist metal frame for modern bedrooms.",
+      "price": 363.26
+    },
+    {
+      "name": "Bookshelf 5-Tier",
+      "description": "Open shelf design with walnut finish.",
+      "price": 436.46
+    },
+    {
+      "name": "Recliner Armchair",
+      "description": "Lean back and relax with padded support.",
+      "price": 309.64
+    },
+    {
+      "name": "TV Entertainment Unit",
+      "description": "Holds TVs up to 65\" with cable management.",
+      "price": 358.16
+    },
+    {
+      "name": "Round Coffee Table",
+      "description": "Scandinavian style centerpiece for living rooms.",
+      "price": 145.37
+    },
+    {
+      "name": "Kitchen Island Cart",
+      "description": "Mobile island with storage and cutting surface.",
+      "price": 774.11
+    },
+    {
+      "name": "L-Shaped Desk",
+      "description": "Spacious work desk for productivity.",
+      "price": 634.93
+    },
+    {
+      "name": "Shoe Rack Bench",
+      "description": "Entryway bench with storage space.",
+      "price": 325.58
+    },
+    {
+      "name": "Nightstand Pair",
+      "description": "Two drawers with classic handles.",
+      "price": 61.06
+    },
+    {
+      "name": "Glass Display Cabinet",
+      "description": "Showcase your d\u00e9cor with elegance.",
+      "price": 395.58
+    },
+    {
+      "name": "Accent Chair",
+      "description": "Bold design to brighten up any corner.",
+      "price": 664.44
+    },
+    {
+      "name": "Patio Furniture Set",
+      "description": "Outdoor table with chairs and cushions.",
+      "price": 225.64
+    },
+    {
+      "name": "Double Wardrobe",
+      "description": "Ample hanging and drawer space.",
+      "price": 472.33
+    },
+    {
+      "name": "Bar Stools (Set of 2)",
+      "description": "Ideal for kitchen islands or bars.",
+      "price": 376.86
+    },
+    {
+      "name": "Foldable Work Table",
+      "description": "Portable and practical for small spaces.",
+      "price": 52.42
+    },
+    {
+      "name": "Wall Mounted Shelf Set",
+      "description": "Floating shelves for display.",
+      "price": 620.88
+    },
+    {
+      "name": "Bamboo Laundry Basket",
+      "description": "Eco-friendly with removable liner.",
+      "price": 358.21
+    },
+    {
+      "name": "Convertible Sofa Bed",
+      "description": "Two-in-one comfort for sleep and lounge.",
+      "price": 61.73
+    },
+    {
+      "name": "Rustic TV Stand",
+      "description": "Wood and steel TV stand with industrial style.",
+      "price": 379.5
+    }
+  ]
+}

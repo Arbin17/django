@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}| Search{% endblock title %}
+
+{% block scripts %}
+<!-- Optional: Animate.css for subtle card effects -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+{% endblock scripts %}
+
+{% block content %}
+
+<header class="bg-dark py-5">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder">Find What You Love</h1>
+      <p class="lead fw-normal text-white-50 mb-4">Search across thousands of products instantly.</p>
+    </div>
+  </div>
+</header>
+
+<!-- Search Form -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-5">
+            <h3 class="text-center mb-4">🔍 What are you looking for?</h3>
+            <form action="{% url 'search' %}" method="post" class="d-flex flex-column flex-md-row gap-3">
+              {% csrf_token %}
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Search products by name, category..."
+                name="q"
+                required
+              />
+              <button type="submit" class="btn btn-dark btn-lg w-100 w-md-auto">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<div class="container py-5">
+  {% if searched %}
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    {% for product in searched %}
+    <div class="col">
+      <div class="card h-100 animate__animated animate__fadeIn">
+        {% if product.is_sale %}
+        <div class="badge bg-danger position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+        {% endif %}
+        <div class="card-body text-center">
+          <h5 class="fw-bold">{{ product.name }}</h5>
+          {% if product.is_sale %}
+          <p>
+            <strike class="text-danger">${{ product.price }}</strike>
+            <span class="ms-2 fw-bold text-success">${{ product.sale_price }}</span>
+          </p>
+          {% else %}
+          <p class="fw-bold">Rs.{{ product.price }}</p>
+          {% endif %}
+          <span class="badge bg-secondary">{{ product.category }}</span>
+        </div>
+        <div class="card-footer bg-transparent border-top-0 text-center">
+          <a href="{% url 'product' product.id %}" class="btn btn-outline-dark w-75">View Product</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <!-- No Results Found -->
+  <div class="text-center py-5">
+    <h3 class="text-muted">😕 No results found</h3>
+    <p class="text-secondary">Try different keywords or explore categories.</p>
+    <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock content %}

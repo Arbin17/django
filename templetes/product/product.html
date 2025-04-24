@@ -1,0 +1,312 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %}| {{ product.name }}{% endblock title %} 
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-left">
+  <div class="card shadow p-4 square-card position-relative custom-card">
+    <div class="row g-0 h-100">
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        {% if product.image %}
+        <img
+          src="{{ product.image.url }}"
+          class="img-fluid rounded img-thumbnail"
+          alt="{{ product.name }}"
+          style="max-height: 250px; object-fit: cover;"
+        />
+            {% else %}
+      <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}" alt="No image available">
+      {% endif %}
+        
+      </div>
+      <div class="col-md-8 d-flex flex-column justify-content-between ps-3">
+        <div class="card-body pb-2">
+          <h5 class="card-title fw-bold mb-2">{{ product.name }}</h5>
+          <p class="card-text mb-2 text-muted bg-light p-2 rounded shadow-sm" style="font-style: italic;">
+            <i class="bi bi-info-circle me-1 text-primary"></i> {{ product.description }}
+          </p>
+          {% if product.is_sale %}
+          <div class="d-flex small text-warning mb-2 align-items-center">
+            <i class="bi bi-star-fill me-1"></i>
+            <span class="fw-semibold">Sale!</span>
+            <i class="bi bi-star-fill ms-1"></i>
+          </div>
+          <p class="mb-1">
+            <strike class="text-danger">${{ product.price }}</strike>
+            <span class="ms-2 fw-bold text-success">${{ product.sale_price }}</span>
+          </p>
+          {% else %}
+          <p class="card-text mb-1"><strong>Price:</strong> Rs.{{ product.price }}</p>
+          {% endif %}
+
+          <p class="card-text mb-0"><strong>Category:</strong> {{ product.catogery }}</p>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <div class="mb-3 px-3 d-flex align-items-center gap-3">
+          <div>Quantity:</div>
+          <div>
+            <select class="form-select" id="qty-cart" style="max-width: 6rem;">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="btn btn-outline-primary btn-sm rounded-pill"
+              value="{{ product.id }}"
+              id="add-cart"
+            >
+              <i class="bi bi-cart-fill me-1"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Check if add-cart button pressed
+  $(document).on("click", "#add-cart", function(e){
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "{% url 'cart-add' %}",
+      data: {
+        product_id: $("#add-cart").val(),
+        product_qty: $('#qty-cart option:selected').text(),
+        csrfmiddlewaretoken: "{{ csrf_token }}",
+        action: "post",
+      },
+      success: function(json){
+         // console.log(json);
+         document.getElementById('cart_quantity').textContent = json.qty
+         location.reload()
+      },
+      error: function (xhr, errmsg, err) {},
+    });
+  });
+</script>
+
+
+<div class="container mt-5">
+  <h3>Customer Reviews</h3>
+  
+  <!-- Average Rating Display -->
+  <div class="d-flex align-items-center mb-4">
+      <div class="text-warning me-3">
+          {% for i in "12345" %}
+              {% if product.average_rating >= forloop.counter %}
+                  <i class="bi bi-star-fill fs-3"></i>
+              {% elif product.average_rating|add:0.5 >= forloop.counter %}
+                  <i class="bi bi-star-half fs-3"></i>
+              {% else %}
+                  <i class="bi bi-star fs-3"></i>
+              {% endif %}
+          {% endfor %}
+      </div>
+      <span class="fs-4">{{ product.average_rating|floatformat:1 }} ({{ product.review_count }} reviews)</span>
+  </div>
+
+  <!-- Review Form (for authenticated users) -->
+  {% if user.is_authenticated %}
+      <div class="card mb-5">
+          <div class="card-body">
+              <h5 class="card-title">
+                  {% if user_review %}Update Your Review{% else %}Write a Review{% endif %}
+              </h5>
+              <form method="post">
+                  {% csrf_token %}
+                  <div class="mb-3">
+                      <label class="form-label">Rating</label>
+                      <div class="rating-stars">
+                          {% for i in "54321" %}
+                              <input type="radio" id="star{{ i }}" name="rating" value="{{ i }}" 
+                                  {% if user_review and user_review.rating == i|add:0 %}checked{% endif %}>
+                              <label for="star{{ i }}"><i class="bi bi-star-fill"></i></label>
+                          {% endfor %}
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label">Review (optional)</label>
+                      <textarea name="review" class="form-control" rows="3">{% if user_review %}{{ user_review.review }}{% endif %}</textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                      {% if user_review %}Update Review{% else %}Submit Review{% endif %}
+                  </button>
+                  {% if user_review %}
+                      <a href="{% url 'delete_review' user_review.id %}" class="btn btn-outline-danger ms-2">Delete Review</a>
+                  {% endif %}
+              </form>
+          </div>
+      </div>
+  {% endif %}
+
+  <!-- Reviews List -->
+  {% if reviews %}
+      <div class="reviews-list">
+          {% for review in reviews %}
+              <div class="card mb-3">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between mb-2">
+                          <h5>{{ review.user.username }}</h5>
+                          <div class="text-warning">
+                              {% for i in "12345" %}
+                                  {% if review.rating >= forloop.counter %}
+                                      <i class="bi bi-star-fill"></i>
+                                  {% else %}
+                                      <i class="bi bi-star"></i>
+                                  {% endif %}
+                              {% endfor %}
+                              <span class="ms-2">{{ review.created_at|date:"M d, Y" }}</span>
+                          </div>
+                      </div>
+                      {% if review.review %}
+                          <p class="card-text">{{ review.review }}</p>
+                      {% endif %}
+                      {% if review.user == request.user %}
+                          <div class="mt-2">
+                              <a href="{% url 'delete_review' review.id %}" class="text-danger">Delete</a>
+                          </div>
+                      {% endif %}
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+  {% else %}
+      <div class="alert alert-info">No reviews yet. Be the first to review!</div>
+  {% endif %}
+</div>
+
+<style>
+  /* Rating stars styling */
+  .rating-stars {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+  }
+  
+  .rating-stars input {
+      display: none;
+  }
+  
+  .rating-stars label {
+      font-size: 1.5rem;
+      color: #ddd;
+      cursor: pointer;
+      padding: 0 3px;
+  }
+  
+  .rating-stars input:checked ~ label,
+  .rating-stars label:hover,
+  .rating-stars label:hover ~ label {
+      color: #ffc107;
+  }
+</style>
+<!-- "You May Also Like" Section -->
+{% if recommended_products %}
+  <div class="container mt-5 mb-5">
+    <h4 class="mb-4 fw-bold text-center" style="color: #2c3e50;">Recommended For You</h4>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      {% for rec_product in recommended_products %}
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden product-card">
+            <div class="position-relative">
+              {% if rec_product.image %}
+                <img src="{{ rec_product.image.url }}" class="card-img-top" alt="{{ rec_product.name }}" style="height: 220px; object-fit: cover;">
+              {% else %}
+                <img src="{% static 'images/placeholder.jpg' %}" class="card-img-top" alt="No image available" style="height: 220px; object-fit: cover;">
+              {% endif %}
+              <div class="product-badge bg-danger text-white position-absolute top-0 start-0 m-2 px-2 py-1 rounded-pill small">
+                Recommended
+              </div>
+            </div>
+            <div class="card-body pb-0">
+              <h5 class="card-title fw-semibold" style="color: #34495e;">{{ rec_product.name|truncatechars:30 }}</h5>
+              <p class="card-text text-success fw-bold">Rs. {{ rec_product.price }}</p>
+              {% if rec_product.average_rating %}
+                <div class="mb-2">
+                  <span class="text-warning">
+                    {% for i in "12345" %}
+                      {% if forloop.counter <= rec_product.average_rating %}
+                        <i class="fas fa-star"></i>
+                      {% else %}
+                        <i class="far fa-star"></i>
+                      {% endif %}
+                    {% endfor %}
+                  </span>
+                  <small class="text-muted">({{ rec_product.review_count }})</small>
+                </div>
+              {% endif %}
+            </div>
+            <div class="card-footer border-top-0 bg-transparent text-center pb-3">
+              <form action="{% url 'track_recommendation_click' %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <input type="hidden" name="source_product_id" value="{{ product.id }}">
+                <input type="hidden" name="recommended_product_id" value="{{ rec_product.id }}">
+                <input type="hidden" name="log_id" value="{{ rec_product.log_id }}">
+                <button type="submit" class="btn btn-dark mt-auto w-75 rounded-pill px-4 py-2">
+                  <i class="fas fa-eye me-2"></i>View Details
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <style>
+    .product-card {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border-color: rgba(0,0,0,0.2);
+    }
+    .product-badge {
+      background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .btn-dark {
+      background: linear-gradient(45deg, #2c3e50, #34495e);
+      border: none;
+      transition: all 0.3s;
+    }
+    .btn-dark:hover {
+      background: linear-gradient(45deg, #34495e, #2c3e50);
+      transform: scale(1.02);
+    }
+  </style>
+{% endif %}
+
+<style>
+  .square-card {
+    width: 750px;
+    height: 270px;
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  .square-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .custom-card .card-title {
+    font-size: 1.25rem;
+  }
+
+  .custom-card .card-text {
+    font-size: 0.95rem;
+  }
+</style>
+{% endblock content %}

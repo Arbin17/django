@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}| Home{% endblock title %}
+
+{% block scripts %}
+<!-- Optional: Add any custom scripts here -->
+{% endblock scripts %}
+
+{% block content %}
+
+<header class="bg-dark py-5 m-0">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="text-center text-white">
+      <h1 class="display-4 fw-bolder animate__animated animate__fadeInDown">Shop in style</h1>
+      <p class="lead fw-normal text-white-50 mb-0 animate__animated animate__fadeInUp">
+        Shop in comfort from your home, knowing you will get what you need
+      </p>
+    </div>
+  </div>
+</header>
+
+<section class="py-5 bg-light">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-start">
+      {% for product in products %}
+      <div class="col mb-5">
+        <div class="card h-100 {% if product.id in visited_ids %}border border-primary border-2{% else %}border-0{% endif %} ">
+          {% if product.id in visited_ids %}
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+              <i class="bi bi-check-circle"></i>
+            </span>
+          {% endif %}
+            {% if product.is_sale %}
+              <div class="badge bg-danger text-white position-absolute" style="top: 0.75rem; right: 0.75rem">
+                Sale
+              </div>
+            {% endif %}
+            <!-- Product image-->
+
+            {% if product.image %}
+                  <img class="card-img-top rounded-top" src="{{ product.image.url }}" alt="{{ product.name }}" style="object-fit: cover; height: 250px;"/>
+            {% else %}
+                  <img class="card-img-top rounded-top" src="{% static 'images/placeholder.jpg' %}" alt="No image available" style="object-fit: cover; height: 250px;">
+            {% endif %}
+
+            
+            <!-- Product details-->
+            <div class="card-body p-4 text-center">
+              <h5 class="fw-bold text-dark">{{ product.name }}</h5>
+
+              {% if product.is_sale %}
+                <div class="text-warning small mb-2">
+                  <i class="bi bi-star-fill"></i>&nbsp;Limited Time Offer&nbsp;<i class="bi bi-star-fill"></i>
+                </div>
+                <p class="mb-2">
+                  <span class="text-muted text-decoration-line-through">Rs {{ product.price }}</span>
+                  &nbsp;<span class="fw-bold text-success">${{ product.sale_price }}</span>
+                </p>
+              {% else %}
+                <p class="mb-2 fw-bold text-primary">Rs.{{ product.price }}</p>
+              {% endif %}
+
+              <p class="text-muted small mb-0">{{ product.category }}</p>
+            </div>
+
+            <!-- Product actions-->
+            <div class="card-footer border-top-0 bg-transparent text-center pb-4">
+              <a class="btn btn-outline-dark mt-auto w-75 rounded-pill" href="{% url 'product' product.id %}">
+                View Product
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+  }
+
+  .card-img-top {
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+</style>
+
+<!-- Optional: Include Animate.css for subtle animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+{% endblock content %}

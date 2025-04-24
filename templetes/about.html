@@ -1,33 +1,45 @@
 {% extends 'base.html' %}
 {% block content %}
- <!-- Header-->
- <header class="bg-dark py-5">
+
+<!-- Header -->
+<header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Shop in style</h1>
-            <p class="lead fw-normal text-white-50 mb-0">With this shopee</p>
+            <h1 class="display-4 fw-bolder">Shop in Style</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this Shopee</p>
         </div>
     </div>
 </header>
 
-<div class="container mb-5">
-    <div class="row">
-        <center>
-            <div class="col-8">
-                <p >
-                    <h1>Your Story (History)</h1>
-                    <p align="justify">
-                    Every business has an origin story worth telling, and usually one that justifies why you do business and have clients.
-                    
-                    Some centennial enterprises have pages of content that can fit in this section, while startups can tell the story of how the company was born, its challenges, and its vision for the future.
-                    
-                    Whatever it is, your story matters to your prospective buyers and team members. Make it entertaining and as immersive as you can.
-                    </p>
+<!-- About Section -->
+<section class="py-5 bg-light">
+    <div class="container px-4 px-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <h2 class="fw-bold mb-4">Our Story</h2>
+                <hr class="w-25 mx-auto mb-4" />
+                <p class="lead text-muted mb-4">
+                    Every business has an origin story worth telling — one that justifies why we exist and how we serve our community.
                 </p>
-  
-
             </div>
-        </center>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-5">
+                        <h4 class="fw-semibold mb-3">Why We Started</h4>
+                        <p class="text-justify text-muted">
+                            Some centennial enterprises have pages of content that fill this section, while startups can tell the story of their humble beginnings, early challenges, and future vision.
+                        </p>
+                        <h4 class="fw-semibold mt-4 mb-3">Our Vision</h4>
+                        <p class="text-justify text-muted">
+                            Whatever it is, your story matters — to your prospective buyers, partners, and even your team. We believe in making e-commerce more personal, trustworthy, and convenient. Our mission is to bring products closer to people, with care and style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
+
 {% endblock %}
